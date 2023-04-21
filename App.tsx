@@ -7,7 +7,10 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
+import HomeScreen from './screen/Home';
+import {SplashProvider} from './context/SplashContextProvider';
+import MyStack from './navigator/Stack';
+import {NavigationContainer} from '@react-navigation/native';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -15,14 +18,11 @@ type SectionProps = PropsWithChildren<{
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView className='w-screen h-screen'>
-      <View className="flex-1 items-center justify-center">
-        <Text className='text-center m-10'>
-          За манай төсөл эхлэх гэж байна та бүхэндээ амжилт хүсэе
-        </Text>
-      </View>
-    </SafeAreaView>
+    <SplashProvider>
+      <NavigationContainer>
+        <MyStack />
+      </NavigationContainer>
+    </SplashProvider>
   );
 }
-
 export default App;
