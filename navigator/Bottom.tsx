@@ -2,6 +2,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screen/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Explore from '../screen/explore';
+import ExplorePage from '../screen/explore';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -22,7 +24,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Explore"
-        component={HomeScreen}
+        component={ExplorePage}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (
