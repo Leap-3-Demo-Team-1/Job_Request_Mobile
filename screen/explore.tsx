@@ -1,16 +1,23 @@
 import React from "react";
 import ExplorePageHeader from "../component/ExplorePageHeader";
 import { SafeAreaView, ScrollView,View } from "react-native"
+import AdvertisingCard from "../component/AdvertisingCard";
 
 const ExplorePage = () => {
 
     return (
         <SafeAreaView className="w-full h-full">
-            <ScrollView>
-                <View className="w-full h-full flex">
+                <View className="w-full h-40 flex">
                     <ExplorePageHeader/>
                 </View>
-            </ScrollView>
+                <ScrollView>
+                    <AdvertisingCard/>
+                    <AdvertisingCard/>
+                    <AdvertisingCard/>
+                    <AdvertisingCard/>
+                    <AdvertisingCard/>
+                    <AdvertisingCard/>
+                </ScrollView>
         </SafeAreaView>
     )
 }
