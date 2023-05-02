@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Explore from '../screen/explore';
 import ExplorePage from '../screen/explore';
+import ProfileLogout from '../screen/profileLogout';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -58,7 +59,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={HomeScreen}
+        component={ProfileLogout}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (

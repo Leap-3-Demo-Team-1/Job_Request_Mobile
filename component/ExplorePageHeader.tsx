@@ -1,8 +1,5 @@
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Text, TextInput, TouchableOpacity, View } from "react-native"
-import SwipeUpDown from 'react-native-swipe-up-down'
-import AdvertisingCard from './AdvertisingCard'
-
 const ExplorePageHeader = () => {
 
     return (
@@ -32,16 +29,6 @@ const ExplorePageHeader = () => {
                     <Ionicons name="ios-chevron-down" size={14} />
                 </TouchableOpacity>
             </View>
-            {/* <SwipeUpDown
-                itemMini={<ItemMini />} // Pass props component when collapsed
-                itemFull={<ItemFull />} // Pass props component when show full
-                onShowMini={() => console.log('mini')}
-                onShowFull={() => console.log('full')}
-                onMoveDown={() => console.log('down')}
-                onMoveUp={() => console.log('up')}
-                disablePressToShow={false} // Press item mini to show full
-                style={{ backgroundColor: 'green' }} // style for swipe
-            /> */}
         </View>
     )
 }
