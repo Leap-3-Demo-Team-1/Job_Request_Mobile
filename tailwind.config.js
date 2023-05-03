@@ -3,6 +3,9 @@ module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./screen/**/*.{js,jsx,ts,tsx}", "./component/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      flex: {
+        '14': '14 2 0%'
+      },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))',
         

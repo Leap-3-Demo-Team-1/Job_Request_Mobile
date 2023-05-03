@@ -14,21 +14,20 @@ import {
 import * as React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
   const categories = [
     {icon: 'human-male-board', title: 'Хичээл'},
     {icon: 'greenhouse', title: 'Гэр/Сууц'},
-    {icon: 'human-male-board', title: 'Бизнес'},
-    {icon: 'human-male-board', title: 'Хичээл'},
-    {icon: 'human-male-board', title: 'Хичээл'},
-    {icon: 'human-male-board', title: 'Хичээл'},
-    {icon: 'human-male-board', title: 'Хичээл'},
+    {icon: 'human-male-board', title: 'Бусад'},
 
     // {icon: 'ios-reorder-four-outline', title: 'Бусад'},
   ];
   const lessonCategories = [{}, {}, {}];
   const quesionsCategories = [{}, {}, {}];
+  const navigator = useNavigation();
+
   return (
     <SafeAreaView className="w-full h-full">
       <ScrollView>
@@ -54,12 +53,21 @@ const HomeScreen = () => {
               // display: 'flex',
               width: '100%',
               alignItems: 'center',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
             }}
             data={categories}
             horizontal={false}
-            numColumns={4}
+            // numColumns={3}
             renderItem={({item, index, separators}) => (
-              <TouchableOpacity className="w-24 h-20 justify-around items-center">
+              <TouchableOpacity
+                className="w-24 h-20 justify-around items-center"
+                onPress={() =>
+                  navigator.navigate('CategoriesScreen', {
+                    titleHeader: item.title,
+                  })
+                }>
                 <MaterialCommunityIcons
                   name={item.icon}
                   size={32}
@@ -88,6 +96,7 @@ const HomeScreen = () => {
                 }}
                 data={lessonCategories}
                 horizontal
+                // keyExtractor={}
                 renderItem={({item, index}) => (
                   <View className="h-full w-40 mr-4 justify-around">
                     <Image
@@ -104,8 +113,10 @@ const HomeScreen = () => {
               />
             </View>
             <View className="flex flex-1 bg-slate-100 mt-5">
-              {quesionsCategories.map(() => (
-                <View className="flex flex-1 gap-2 border-b-2 border-gray-300 mb-1">
+              {quesionsCategories.map((item, key) => (
+                <View
+                  key={key}
+                  className="flex flex-1 gap-2 border-b-2 border-gray-300 mb-1">
                   <Text className=" text-sm text-[#999]">CategoryName</Text>
                   <Text className=" font-bold">Энийг яаж хийдэг вэ?</Text>
                   <Text className=" text-sm text-[#999]">
