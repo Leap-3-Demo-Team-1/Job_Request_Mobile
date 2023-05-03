@@ -2,6 +2,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screen/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import ExplorePage from '../screen/explore';
+import CommunityPage from '../screen/CommunityPage';
+import ProfileLogout from '../screen/profileLogout';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
