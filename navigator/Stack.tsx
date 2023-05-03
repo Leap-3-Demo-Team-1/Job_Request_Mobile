@@ -5,6 +5,7 @@ import BottomTabNavigator from './Bottom';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CategoryDetails from '../screen/CategoryDetails';
 
+import Login from '../screen/login';
 type RootStackParamList = {};
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -53,6 +54,13 @@ const MyStack = () => {
             )
           }
         })}
+      />
+      <Stack.Screen
+        name={"Login" as never}
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
       />
     </Stack.Navigator>
   );

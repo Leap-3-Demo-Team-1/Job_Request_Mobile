@@ -2,7 +2,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screen/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import CommunityPage from '../screen/CommunityPage';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -23,7 +22,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Explore"
-        component={HomeScreen}
+        component={ExplorePage}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (
@@ -57,7 +56,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={HomeScreen}
+        component={ProfileLogout}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (
