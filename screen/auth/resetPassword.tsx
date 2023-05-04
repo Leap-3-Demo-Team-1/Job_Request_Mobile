@@ -18,7 +18,7 @@ const ResetPassword = () => {
                     className="w-11/12 h-11 rounded border border-indigo-950 pl-3"
                     placeholder="Имэйл хаяг эсвэл утасны дугаараа оруулна уу?"
                 />
-                <TouchableOpacity className="w-11/12 h-11 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
+                <TouchableOpacity onPress={() => {navigation.navigate('Otp' as never)}} className="w-11/12 h-11 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
                     <Text className="text-white text-lg text-sky-200 font-bold">Илгээх</Text>
                 </TouchableOpacity>
             </View>

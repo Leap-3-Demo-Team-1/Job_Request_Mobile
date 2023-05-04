@@ -11,6 +11,8 @@ import SignUpSelect from '../screen/auth/signUpSelect';
 import SignUpMember from '../screen/auth/signUpMember';
 import SignUpUser from '../screen/auth/signUpUser';
 import ResetPassword from '../screen/auth/resetPassword';
+import Otp from '../screen/auth/otp';
+import NewPassword from '../screen/auth/newPassword';
 
 type RootStackParamList = {};
 const Stack = createStackNavigator<RootStackParamList>();
@@ -99,6 +101,20 @@ const MyStack = () => {
       <Stack.Screen
         name={"ResetPassword" as never}
         component={ResetPassword}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={"Otp" as never}
+        component={Otp}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={"newPassword" as never}
+        component={NewPassword}
         options={{
           headerShown: false,
         }}
