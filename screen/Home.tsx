@@ -40,7 +40,7 @@ const HomeScreen = () => {
             </View>
             <View className="pl-5 flex flex-1 justify-end gap-5 items-center flex-row">
               <Ionicons name="search-outline" size={24} />
-              <Ionicons name="person-outline" size={24} />
+              <Ionicons name="person-outline" size={24} onPress={() => {navigator.navigate("Profile" as never)}}/>
             </View>
           </View>
           <View className="h-20 items-center justify-center">
