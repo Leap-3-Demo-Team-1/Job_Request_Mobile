@@ -36,7 +36,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="News"
-        component={TabScreens}
+        component={CommunityPage}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (

@@ -35,7 +35,7 @@ const SignUpMember = () => {
                         placeholder="Нууц үг"
                     />
                     <TouchableOpacity className="w-10/12 h-11 ml-5 mr-5 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
-                        <Text className="text-white text-lg text-sky-200 font-bold">Бүртгүүлэх</Text>
+                        <Text className="text-white text-lg  font-bold">Бүртгүүлэх</Text>
                     </TouchableOpacity>
                 </View>
             </View>
