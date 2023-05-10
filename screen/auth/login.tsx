@@ -28,8 +28,8 @@ const Login = () => {
                         placeholder="Нууц үгээ хийнэ үү?"
                     />
                 </View>
-                <TouchableOpacity className="w-11.5/12 h-11 ml-5 mr-5 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
-                    <Text className="text-white text-lg text-sky-200 font-bold">Нэвтрэх</Text>
+                <TouchableOpacity className="w-11.5/12 h-11 ml-5 mr-5 rounded bg-[#00C2FF] shadow shadow-sky-700 flex items-center justify-center">
+                    <Text className="text-white text-lg  font-bold">Нэвтрэх</Text>
                 </TouchableOpacity>
                 <View className="flex-row w-full justify-around">
                     <TouchableOpacity onPress={() => {navigation.navigate("ResetPassword" as never)}}>
