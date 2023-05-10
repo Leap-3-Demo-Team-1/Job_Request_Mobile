@@ -81,7 +81,7 @@ const CategoriesScreen = () => {
           value={tabIndex}
           onChange={e => setTabIndex(e)}
           indicatorStyle={{
-            backgroundColor: '#02C7AE',
+            backgroundColor: '#00C2FF',
             height: 3,
           }}>
           {tabs.map((el, index) => (
@@ -94,7 +94,7 @@ const CategoriesScreen = () => {
                 display: 'flex',
               }}>
               <Text
-                className={`${tabIndex === index ? 'color-[#02C7AE]' : ''}`}>
+                className={`${tabIndex === index ? 'color-[#00C2FF]' : ''}`}>
                 {el.name}
               </Text>
             </Tab.Item>
@@ -136,7 +136,7 @@ const CategoriesScreen = () => {
             <View className=" w-11/12 m-auto flex flex-1">
               {[1, 4, 9].map((el, index) => (
                 <TouchableOpacity key={index} className=" my-2 justify-center">
-                  <Text className="color-[#02C7AE]">Англи хичээл</Text>
+                  <Text className="color-[#00C2FF]">Англи хичээл</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -145,7 +145,7 @@ const CategoriesScreen = () => {
             <View className=" w-11/12 m-auto flex flex-1">
               {[1, 4, 9].map((el, index) => (
                 <TouchableOpacity key={index} className=" my-2 justify-center">
-                  <Text className="color-[#02C7AE]">Анasdгли хичээл</Text>
+                  <Text className="color-[#00C2FF]">Анasdгли хичээл</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -154,7 +154,7 @@ const CategoriesScreen = () => {
             <View className=" w-11/12 m-auto flex flex-1">
               {[1, 4, 9].map((el, index) => (
                 <TouchableOpacity key={index} className=" my-2 justify-center">
-                  <Text className="color-[#02C7AE]">ssss хичээл</Text>
+                  <Text className="color-[#00C2FF]">ssss хичээл</Text>
                 </TouchableOpacity>
               ))}
             </View>

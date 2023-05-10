@@ -87,7 +87,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
               </Text>
             </View>
             <Pressable
-              className="w-11/12 py-4 justify-center items-center rounded-lg bg-[#02C7AE]"
+              className="w-11/12 py-4 justify-center items-center rounded-lg bg-[#00C2FF]"
               onPress={() => setVisible(!visible)}>
               <Text className=" color-[#ffff] text-sm">Үгүй</Text>
             </Pressable>
@@ -113,7 +113,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
             onValueChange={setSliderValue}
             maximumValue={3}
             minimumValue={0}
-            minimumTrackTintColor="#02C7AE"
+            minimumTrackTintColor="#00C2FF"
             maximumTrackTintColor="transparent"
             animationType="timing"
             trackStyle={{
@@ -134,7 +134,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
               ? '60%'
               : '100%'
           }`}
-          titleStyle={{fontSize: 14, color: '#02C7AE'}}
+          titleStyle={{fontSize: 14, color: '#00C2FF'}}
         />
       </Tab>
       <TabView value={index} animationType="timing" disableSwipe>
@@ -157,7 +157,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
                     boxType="square"
                     tintColor="#3333"
                     onCheckColor="#FFF"
-                    onFillColor="#02C7AE"
+                    onFillColor="#00C2FF"
                     onTintColor="#fff"
                     onAnimationType="bounce"
                     offAnimationType="bounce"
@@ -202,7 +202,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
                     boxType="square"
                     tintColor="#3333"
                     onCheckColor="#FFF"
-                    onFillColor="#02C7AE"
+                    onFillColor="#00C2FF"
                     onTintColor="#fff"
                     onAnimationType="bounce"
                     offAnimationType="bounce"
@@ -247,7 +247,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
                     boxType="square"
                     tintColor="#3333"
                     onCheckColor="#FFF"
-                    onFillColor="#02C7AE"
+                    onFillColor="#00C2FF"
                     onTintColor="#fff"
                     onAnimationType="bounce"
                     offAnimationType="bounce"
@@ -286,7 +286,7 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
             (index === 1 && !time.some(el => el.selected)) ||
             (index === 2 && !location.some(el => el.selected))
               ? 'bg-[#999]'
-              : 'bg-[#02C7AE]'
+              : 'bg-[#00C2FF]'
           }
         `}
         onPress={() => nextButtonHandler()}>

@@ -15,8 +15,8 @@ import * as React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../App';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../App';
 export type NavigationProp = StackNavigationProp<
   RootStackParamList,
   'CategoriesScreen'
@@ -38,10 +38,11 @@ const HomeScreen = () => {
       <ScrollView>
         <View className="m-auto w-11/12">
           <View className="flex flex-row">
-            <View className="flex flex-1 justify-center">
-              <Text className="font-semibold italic text-xl color-[#02C7AE]">
-                Шийдэе
-              </Text>
+            <View className="flex justify-center">
+              <Image
+                className="object-contain h-8 w-16"
+                source={require('../assets/logoAjilla.png')}
+              />
             </View>
             <View className="pl-5 flex flex-1 justify-end gap-5 items-center flex-row">
               <Ionicons name="search-outline" size={24} />
@@ -49,43 +50,14 @@ const HomeScreen = () => {
             </View>
           </View>
           <View className="h-20 items-center justify-center">
-            <View className="h-4/6 w-11/12 bg-[#393E46] rounded-lg justify-center items-center">
+            <View className="h-4/6 w-11/12 bg-[#00C2FF] rounded-lg justify-center items-center">
               <Text className="text-white text-lg">Рекламны орон зай</Text>
             </View>
           </View>
-          <View className='w-full flex justify-between flex-row'>
-          {categories.map((item, index)=>(
+          <View className="w-full flex justify-between flex-row">
+            {categories.map((item, index) => (
               <TouchableOpacity
-              key={index}
-              className="w-24 h-20 justify-around items-center"
-              onPress={() =>
-                navigator.navigate('CategoriesScreen', {
-                  titleHeader: item.title,
-                })
-              }>
-              <MaterialCommunityIcons
-                name={item.icon}
-                size={32}
-                color="#444"
-              />
-              <Text>{item.title}</Text>
-            </TouchableOpacity>
-            ))}
-          </View>
-          {/* <FlatList
-            contentContainerStyle={{
-              // display: 'flex',
-              width: '100%',
-              alignItems: 'center',
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-            }}
-            data={categories}
-            horizontal={false}
-            // numColumns={3}
-            renderItem={({item, index, separators}) => (
-              <TouchableOpacity
+                key={index}
                 className="w-24 h-20 justify-around items-center"
                 onPress={() =>
                   navigator.navigate('CategoriesScreen', {
@@ -99,15 +71,15 @@ const HomeScreen = () => {
                 />
                 <Text>{item.title}</Text>
               </TouchableOpacity>
-            )}
-          /> */}
+            ))}
+          </View>
           <View className=" flex h-[530px] mt-6">
             <View className="flex-row justify-between mb-4">
               <Text className="font-semibold">ХАНДАЛТ ИХТЭЙ ҮЙЛЧИЛГЭЭ</Text>
               <TouchableOpacity>
                 <View className="flex-row justify-center items-center gap-2">
-                  <Text className=" text-[#02C7AE]">Бүгдийг харах</Text>
-                  <Ionicons name="chevron-forward" size={14} color="#02C7AE" />
+                  <Text className=" text-[#00C2FF]">Бүгдийг харах</Text>
+                  <Ionicons name="chevron-forward" size={14} color="#00C2FF" />
                 </View>
               </TouchableOpacity>
             </View>
@@ -123,10 +95,12 @@ const HomeScreen = () => {
                 // keyExtractor={}
                 renderItem={({item, index}) => (
                   <View className="h-full w-40 mr-4 justify-around">
-                    <Image
-                      className="h-24 w-full rounded-xl"
-                      source={require('../assets/logo.png')}
-                    />
+                    <View className='h-24 w-full rounded-xl justify-center items-center bg-slate-200'>
+                      <Image
+                        className=" h-3/5 w-8/12 object-contain"
+                        source={require('../assets/logoAjilla.png')}
+                      />
+                    </View>
                     <Text>Сургалт</Text>
                     <View className="flex-row gap-1">
                       <Ionicons name="eye-outline" size={16} color="#999" />

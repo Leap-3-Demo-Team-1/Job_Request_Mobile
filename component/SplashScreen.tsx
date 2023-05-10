@@ -3,10 +3,10 @@ import {Image, View} from 'react-native';
 
 const SplashScreen = () => {
   return (
-    <View className="w-full h-full bg-[#393E46] justify-center items-center">
+    <View className="w-full h-full bg-[#ffffff] justify-center items-center">
       <Image
-        className="object-contain h-48 w-96"
-        source={require('../assets/logo.png')}
+        className="object-contain h-30 w-68"
+        source={require('../assets/logoAjilla.png')}
       />
     </View>
   );
