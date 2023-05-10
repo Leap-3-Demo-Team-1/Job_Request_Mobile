@@ -1,4 +1,4 @@
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native';
 import CategoriesScreen from '../screen/CategoriesItems';
 import BottomTabNavigator from './Bottom';
@@ -13,10 +13,9 @@ import SignUpUser from '../screen/auth/signUpUser';
 import ResetPassword from '../screen/auth/resetPassword';
 import Otp from '../screen/auth/otp';
 import NewPassword from '../screen/auth/newPassword';
+import { RootStackParamList } from '../App';
 
-type RootStackParamList = {};
 const Stack = createStackNavigator<RootStackParamList>();
-
 const MyStack = () => {
 
   return (
@@ -29,10 +28,10 @@ const MyStack = () => {
         }}
       />
       <Stack.Screen
-        name={"CategoriesScreen" as never}
+        name={"CategoriesScreen"}
         component={CategoriesScreen}
         options={({ navigation, route }) => ({
-          headerTitle: route.params,
+          headerTitle: route.params.titleHeader,
           headerLeft: () => {
             return (
               <TouchableOpacity
@@ -47,24 +46,26 @@ const MyStack = () => {
         })}
       />
       <Stack.Screen
-        name={"CategoryDetails" as never}
+        name={"CategoryDetails"}
         component={CategoryDetails}
+        
         options={({ navigation, route })=>({
-          headerTitle:route.params,
-          headerLeft: ()=>{
-            return(
-              <TouchableOpacity
-                style={{ margin: 10 }}
-                onPress={() => navigation.goBack()}
-              >
-                <Ionicons name="arrow-back" size={24} color="black" />
-              </TouchableOpacity>
-            )
-          }
+          // headerTitle:route.params.title,
+          headerShown: false,
+          // headerLeft: ()=>{
+          //   return(
+          //     <TouchableOpacity
+          //       style={{ margin: 10 }}
+          //       onPress={() => navigation.goBack()}
+          //     >
+          //       <Ionicons name="arrow-back" size={24} color="black" />
+          //     </TouchableOpacity>
+          //   )
+          // }
         })}
       />
       <Stack.Screen
-        name={"Login" as never}
+        name={"Login"}
         component={Login}
         options={{
           headerShown: false,

@@ -5,6 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import ExplorePage from '../screen/explore';
 import CommunityPage from '../screen/CommunityPage';
 import ProfileLogout from '../screen/profileLogout';
+import TabScreens from '../screen/TabScreen';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -35,7 +36,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="News"
-        component={CommunityPage}
+        component={TabScreens}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (

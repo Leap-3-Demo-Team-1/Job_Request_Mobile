@@ -11,10 +11,12 @@ import HomeScreen from './screen/Home';
 import {SplashProvider} from './context/SplashContextProvider';
 import MyStack from './navigator/Stack';
 import {NavigationContainer} from '@react-navigation/native';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+export type RootStackParamList = {
+  CategoriesScreen: {titleHeader:string};
+  Bottom: undefined;
+  CategoryDetails: {title:string};
+  Login: undefined;
+};
 
 function App(): JSX.Element {
   return (
