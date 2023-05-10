@@ -7,7 +7,6 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import HomeScreen from './screen/Home';
 import {SplashProvider} from './context/SplashContextProvider';
 import MyStack from './navigator/Stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -16,6 +15,13 @@ export type RootStackParamList = {
   Bottom: undefined;
   CategoryDetails: {title:string};
   Login: undefined;
+  Profile: undefined;
+  SignUpSelect: undefined;
+  SignUpMember: undefined;
+  SignUpUser: undefined;
+  ResetPassword: undefined;
+  Otp: undefined;
+  newPassword: undefined
 };
 
 function App(): JSX.Element {

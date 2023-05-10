@@ -1,7 +1,7 @@
 import {SafeAreaView, Text, TextInput, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const CommunityPage = () => {
+export const CommunityPage = () => {
   return (
     <SafeAreaView>
       <View className=" m-auto w-11/12 h-full">
@@ -24,4 +24,3 @@ const CommunityPage = () => {
     </SafeAreaView>
   );
 };
-export default CommunityPage;

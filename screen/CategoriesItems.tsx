@@ -4,10 +4,6 @@ import {
   FlatList,
   Image,
   Keyboard,
-  KeyboardAvoidingView,
-  Platform,
-  Pressable,
-  ScrollView,
   Text,
   TextInput,
   TouchableNativeFeedback,
@@ -22,12 +18,10 @@ export type NavigationProp = StackNavigationProp<
   RootStackParamList,
   'CategoriesScreen'
 >;
-const CategoriesScreen = () => {
+export const CategoriesScreen = () => {
   const [value, setValue] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
-
   const navigator = useNavigation<NavigationProp>();
-
   const schoolCategories = [
     {
       title: 'Англи хэлний хичээл',
@@ -164,4 +158,3 @@ const CategoriesScreen = () => {
     </TouchableNativeFeedback>
   );
 };
-export default CategoriesScreen;

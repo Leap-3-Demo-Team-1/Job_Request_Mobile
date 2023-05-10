@@ -3,7 +3,7 @@ import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-const NewPassword = () => {
+export const NewPassword = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView className="items-center">
@@ -31,4 +31,3 @@ const NewPassword = () => {
         </SafeAreaView>
     )
 }
-export default NewPassword;

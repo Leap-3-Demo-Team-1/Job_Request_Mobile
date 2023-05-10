@@ -2,7 +2,7 @@ import {Button, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 
-const ProfileLogout = () => {
+export const ProfileLogout = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView>
@@ -43,4 +43,3 @@ const ProfileLogout = () => {
     </SafeAreaView>
   );
 };
-export default ProfileLogout;

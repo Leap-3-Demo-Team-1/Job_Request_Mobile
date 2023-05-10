@@ -16,7 +16,7 @@ import {RootStackParamList} from '../App';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type NavigationProp = StackScreenProps<RootStackParamList, 'CategoryDetails'>;
-const CategoryDetails = ({route, navigation}: NavigationProp) => {
+export const CategoryDetails = ({route, navigation}: NavigationProp) => {
   const [stage, setStage] = useState([
     {title: 'Анхан шат', id: 0, selected: false},
     {title: 'Дунд шат', id: 1, selected: false},
@@ -297,4 +297,3 @@ const CategoryDetails = ({route, navigation}: NavigationProp) => {
     </View>
   );
 };
-export default CategoryDetails;

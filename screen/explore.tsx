@@ -3,7 +3,7 @@ import ExplorePageHeader from "../component/ExplorePageHeader";
 import { SafeAreaView, ScrollView,View } from "react-native"
 import AdvertisingCard from "../component/AdvertisingCard";
 
-const ExplorePage = () => {
+export const ExplorePage = () => {
 
     return (
         <SafeAreaView className="w-full h-full">
@@ -21,4 +21,3 @@ const ExplorePage = () => {
         </SafeAreaView>
     )
 }
-export default ExplorePage;

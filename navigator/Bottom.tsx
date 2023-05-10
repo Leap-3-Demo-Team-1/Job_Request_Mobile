@@ -1,17 +1,14 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screen/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import ExplorePage from '../screen/explore';
-import CommunityPage from '../screen/CommunityPage';
-import ProfileLogout from '../screen/profileLogout';
-import TabScreens from '../screen/TabScreen';
+import { CommunityPage, ExplorePage, ProfileLogout } from '../screen';
+import { HomeScreen } from '../screen/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={{
-      tabBarActiveTintColor:'#020617'
+      tabBarActiveTintColor:'#00C2FF'
     }}>
       <Tab.Screen
         name="Home"
@@ -19,7 +16,7 @@ const BottomTabNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Ionicons name="ios-home" size={size} />
+            <Ionicons name="ios-home" color={color} size={size} />
           ),
           title: 'Нүүр',
         }}

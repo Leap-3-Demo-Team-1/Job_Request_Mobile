@@ -1,13 +1,9 @@
 import {
-  Button,
   FlatList,
   Image,
-  Pressable,
   SafeAreaView,
   ScrollView,
   Text,
-  Touchable,
-  TouchableHighlight,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -21,13 +17,11 @@ export type NavigationProp = StackNavigationProp<
   RootStackParamList,
   'CategoriesScreen'
 >;
-const HomeScreen = () => {
+export const HomeScreen = () => {
   const categories = [
     {icon: 'human-male-board', title: 'Хичээл'},
     {icon: 'greenhouse', title: 'Гэр/Сууц'},
     {icon: 'human-male-board', title: 'Бусад'},
-
-    // {icon: 'ios-reorder-four-outline', title: 'Бусад'},
   ];
   const lessonCategories = [{}, {}, {}];
   const quesionsCategories = [{}, {}, {}];
@@ -37,7 +31,7 @@ const HomeScreen = () => {
     <SafeAreaView className="w-full h-full">
       <ScrollView>
         <View className="m-auto w-11/12">
-          <View className="flex flex-row">
+          <View className="flex flex-row h-10">
             <View className="flex justify-center">
               <Image
                 className="object-contain h-8 w-16"
@@ -92,7 +86,6 @@ const HomeScreen = () => {
                 }}
                 data={lessonCategories}
                 horizontal
-                // keyExtractor={}
                 renderItem={({item, index}) => (
                   <View className="h-full w-40 mr-4 justify-around">
                     <View className='h-24 w-full rounded-xl justify-center items-center bg-slate-200'>
@@ -143,4 +136,3 @@ const HomeScreen = () => {
     </SafeAreaView>
   );
 };
-export default HomeScreen;

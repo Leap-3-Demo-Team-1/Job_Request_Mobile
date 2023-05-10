@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native"
 import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from "react-native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-const ResetPassword = () => {
+export const ResetPassword = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
@@ -25,4 +25,3 @@ const ResetPassword = () => {
         </SafeAreaView>
     )
 }
-export default ResetPassword;

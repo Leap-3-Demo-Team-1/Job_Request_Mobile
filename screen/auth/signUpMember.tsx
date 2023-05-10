@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native"
 import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from "react-native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-const SignUpMember = () => {
+export const SignUpMember = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
@@ -42,4 +42,3 @@ const SignUpMember = () => {
         </SafeAreaView>
     )
 }
-export default SignUpMember;

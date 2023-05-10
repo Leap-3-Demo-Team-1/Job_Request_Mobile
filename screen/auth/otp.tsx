@@ -3,7 +3,7 @@ import OTPInputView from "@twotalltotems/react-native-otp-input";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from "@react-navigation/native";
 
-const Otp = () => {
+export const Otp = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
@@ -58,4 +58,3 @@ const styles = StyleSheet.create({
         borderColor: "blue",
     },
 });
-export default Otp;
