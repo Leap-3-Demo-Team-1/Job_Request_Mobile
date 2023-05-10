@@ -1,4 +1,4 @@
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native';
 import CategoriesScreen from '../screen/CategoriesItems';
 import BottomTabNavigator from './Bottom';
@@ -6,9 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import CategoryDetails from '../screen/CategoryDetails';
 
 import Login from '../screen/login';
-type RootStackParamList = {};
+import { RootStackParamList } from '../App';
 const Stack = createStackNavigator<RootStackParamList>();
-
 const MyStack = () => {
 
   return (
@@ -21,7 +20,7 @@ const MyStack = () => {
         }}
       />
       <Stack.Screen
-        name={"CategoriesScreen" as never}
+        name={"CategoriesScreen"}
         component={CategoriesScreen}
         options={({ navigation, route }) => ({
           headerTitle: route.params.titleHeader,
@@ -39,24 +38,26 @@ const MyStack = () => {
         })}
       />
       <Stack.Screen
-        name={"CategoryDetails" as never}
+        name={"CategoryDetails"}
         component={CategoryDetails}
+        
         options={({ navigation, route })=>({
-          headerTitle:route.params.title,
-          headerLeft: ()=>{
-            return(
-              <TouchableOpacity
-                style={{ margin: 10 }}
-                onPress={() => navigation.goBack()}
-              >
-                <Ionicons name="arrow-back" size={24} color="black" />
-              </TouchableOpacity>
-            )
-          }
+          // headerTitle:route.params.title,
+          headerShown: false,
+          // headerLeft: ()=>{
+          //   return(
+          //     <TouchableOpacity
+          //       style={{ margin: 10 }}
+          //       onPress={() => navigation.goBack()}
+          //     >
+          //       <Ionicons name="arrow-back" size={24} color="black" />
+          //     </TouchableOpacity>
+          //   )
+          // }
         })}
       />
       <Stack.Screen
-        name={"Login" as never}
+        name={"Login"}
         component={Login}
         options={{
           headerShown: false,

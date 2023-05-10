@@ -15,7 +15,12 @@ import * as React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
-
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../App';
+export type NavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'CategoriesScreen'
+>;
 const HomeScreen = () => {
   const categories = [
     {icon: 'human-male-board', title: 'Хичээл'},
@@ -26,7 +31,7 @@ const HomeScreen = () => {
   ];
   const lessonCategories = [{}, {}, {}];
   const quesionsCategories = [{}, {}, {}];
-  const navigator = useNavigation();
+  const navigator = useNavigation<NavigationProp>();
 
   return (
     <SafeAreaView className="w-full h-full">
@@ -48,7 +53,26 @@ const HomeScreen = () => {
               <Text className="text-white text-lg">Рекламны орон зай</Text>
             </View>
           </View>
-          <FlatList
+          <View className='w-full flex justify-between flex-row'>
+          {categories.map((item, index)=>(
+              <TouchableOpacity
+              key={index}
+              className="w-24 h-20 justify-around items-center"
+              onPress={() =>
+                navigator.navigate('CategoriesScreen', {
+                  titleHeader: item.title,
+                })
+              }>
+              <MaterialCommunityIcons
+                name={item.icon}
+                size={32}
+                color="#444"
+              />
+              <Text>{item.title}</Text>
+            </TouchableOpacity>
+            ))}
+          </View>
+          {/* <FlatList
             contentContainerStyle={{
               // display: 'flex',
               width: '100%',
@@ -76,7 +100,7 @@ const HomeScreen = () => {
                 <Text>{item.title}</Text>
               </TouchableOpacity>
             )}
-          />
+          /> */}
           <View className=" flex h-[530px] mt-6">
             <View className="flex-row justify-between mb-4">
               <Text className="font-semibold">ХАНДАЛТ ИХТЭЙ ҮЙЛЧИЛГЭЭ</Text>

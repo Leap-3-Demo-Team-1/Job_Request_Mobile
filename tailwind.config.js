@@ -16,7 +16,13 @@ module.exports = {
 
         // Complex site-specific row configuration
         'layout': '200px minmax(900px, 1fr) 100px',
-      }
+      },
+      opacity: {
+        '15': '0.15',
+        '35': '0.35',
+        '65': '0.65',
+       },
+       backgroundOpacity: ['active'],
     },
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui'],
@@ -25,7 +31,14 @@ module.exports = {
       'display': ['Oswald'],
       'body': ['"Open Sans"'],
     },
+     
   },
   plugins: [],
+  variants: {
+    extend: {
+      // ...
+     backgroundOpacity: ['active'],
+    }
+  }
 }
 
