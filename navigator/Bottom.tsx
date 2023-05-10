@@ -22,7 +22,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Explore"
+        name="Үйлчилгээ"
         component={ExplorePage}
         options={{
           headerShown: false,
@@ -32,7 +32,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="News"
+        name="Зар"
         component={CommunityPage}
         options={{
           headerShown: false,
@@ -42,7 +42,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Chat"
+        name="Харилцаа"
         component={HomeScreen}
         options={{
           headerShown: false,
