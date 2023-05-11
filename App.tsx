@@ -23,6 +23,7 @@ export type RootStackParamList = {
   Otp: undefined;
   newPassword: undefined;
   ProfileLogin:undefined;
+  Simple:undefined;
 };
 
 function App(): JSX.Element {
