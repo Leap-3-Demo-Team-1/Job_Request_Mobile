@@ -14,7 +14,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {RootStackParamList} from '../App';
 import {Tab, TabView} from '@rneui/themed';
-export type NavigationProp = StackNavigationProp<
+type NavigationProp = StackNavigationProp<
   RootStackParamList,
   'CategoriesScreen'
 >;

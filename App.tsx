@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {SplashProvider} from './context/SplashContextProvider';
 import MyStack from './navigator/Stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -21,7 +20,9 @@ export type RootStackParamList = {
   SignUpUser: undefined;
   ResetPassword: undefined;
   Otp: undefined;
-  newPassword: undefined
+  newPassword: undefined;
+  ExploreItem: undefined;
+  AdvertisingCard: undefined
 };
 
 function App(): JSX.Element {

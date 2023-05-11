@@ -1,9 +1,16 @@
+import { useNavigation } from "@react-navigation/core";
+import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
+import { RootStackParamList } from "../App";
+type NavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'AdvertisingCard'
+>;
 const AdvertisingCard = () => {
+    const navigator = useNavigation<NavigationProp>()
     return (
-        <TouchableOpacity className="w-full h-32 border-b-2 border-gray-400 flex flex-row pr-2">
+        <TouchableOpacity className="w-full h-32 border-b-2 border-gray-400 flex flex-row pr-2" onPress={()=>navigator.navigate("ExploreItem")}>
             <View className="w-4/5 h-full pl-4 pr-3 flex justify-evenly">
                 <Text className="text-lg" numberOfLines={1}>Таний сурталчилгааны орон зай</Text>
                 <Text className="text-base text-gray-500" numberOfLines={1}>Дэлгэрэнгүй мэдээлэл авахыг хүсвэл энд дарна уу?</Text>

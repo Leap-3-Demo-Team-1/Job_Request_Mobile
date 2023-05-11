@@ -4,6 +4,8 @@ export * from './CommunityPage'
 export * from './TabScreen'
 export * from './explore'
 export * from './profileLogout'
+export * from './ExploreItem'
+
 
 
 
