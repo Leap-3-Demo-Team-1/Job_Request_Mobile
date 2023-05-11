@@ -7,10 +7,10 @@ export const ProfileLogout = () => {
   return (
     <SafeAreaView>
       <View className="h-full w-full">
-        <View className="w-full h-14 flex justify-between items-center flex-row border-b border-gray-300">
+        <View className="w-full h-10 flex justify-between items-center flex-row border-b border-gray-300">
           <Text className="text-xl pl-4">Profile</Text>
           <View className="h-full w-14 flex-row items-center justify-around">
-            <Ionicons name="person-outline" size={26} />
+            <Ionicons name="person-outline" size={24} />
           </View>
         </View>
         <View className="w-full h-2/3 flex items-center justify-center mt-10">
@@ -32,7 +32,7 @@ export const ProfileLogout = () => {
               onPress={() => {
                 navigation.navigate('Login' as never);
               }}
-              className="w-48 h-12 bg-[#00C2FF] flex items-center justify-center rounded">
+              className="w-48 h-11 bg-[#00C2FF] flex items-center justify-center rounded shadow shadow-sky-700">
               <Text className="text-white text-base font-medium">
                 Нэвтрэх/Бүртгүүлэх
               </Text>

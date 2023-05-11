@@ -6,7 +6,7 @@ export const Login = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
-            <View className="w-full h-12 border-b border-gray-300 flex-row items-center justify-end pr-4">
+            <View className="w-full h-10 border-b border-gray-300 flex-row items-center justify-end pr-4">
                 <Text className="text-xl pr-28">Нэвтрэх</Text>
                 <Ionicons name="md-close-outline" size={32} onPress={() => { navigation.goBack() }} />
             </View>

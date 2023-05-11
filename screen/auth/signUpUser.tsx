@@ -6,8 +6,9 @@ export const SignUpUser = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
-            <View className="w-full h-12 border-b border-gray-300 flex-row items-center justify-between pr-4 pl-4">
-                <Ionicons name="arrow-back" size={26} onPress={() => { navigation.goBack() }} />
+             <View className="w-full h-10 border-b border-gray-300 flex-row items-center justify-between pr-4 pl-4">
+                <Ionicons name="arrow-back" size={24} onPress={() => { navigation.goBack()}} />
+                <Ionicons name="md-close-outline" size={30} onPress={() => { navigation.navigate("Bottom" as never) }} />
             </View>
             <View className="w-full h-full">
                 <View className="w-full h-1 flex items-center mt-14">
@@ -15,22 +16,22 @@ export const SignUpUser = () => {
                 </View>
                 <View className="w-full h-96 items-center justify-evenly mt-28">
                     <TextInput
-                        className="w-10/12 h-11 rounded border border-indigo-950 pl-3"
+                        className="w-10/12 h-11 rounded border border-gray-400 pl-3"
                         placeholder="Овог"
                     />
                     <TextInput
-                        className="w-10/12 h-11 rounded border border-indigo-950 pl-3"
+                        className="w-10/12 h-11 rounded border border-gray-400 pl-3"
                         placeholder="Нэр"
                     />
                     <TextInput
-                        className="w-10/12 h-11 rounded border border-indigo-950 pl-3"
+                        className="w-10/12 h-11 rounded border border-gray-400 pl-3"
                         placeholder="Имэйл хаяг/утасны дугаар"
                     />
                     <TextInput
-                        className="w-10/12 h-11 rounded border border-indigo-950 pl-3"
+                        className="w-10/12 h-11 rounded border border-gray-400 pl-3"
                         placeholder="Нууц үг"
                     />
-                    <TouchableOpacity className="w-10/12 h-11 ml-5 mr-5 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
+                    <TouchableOpacity onPress={() => navigation.navigate("ProfileLogin" as never)} className="w-10/12 h-11 ml-5 mr-5 rounded bg-[#00C2FF] shadow shadow-sky-700 flex items-center justify-center">
                         <Text className="text-white text-lg  font-bold">Бүртгүүлэх</Text>
                     </TouchableOpacity>
                 </View>

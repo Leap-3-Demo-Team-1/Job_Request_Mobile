@@ -8,8 +8,8 @@ export const Otp = () => {
     return (
         <SafeAreaView>
             <View className="w-full h-full items-center">
-                <View className="w-full h-12 border-b border-gray-300 flex-row items-center pl-4">
-                    <Ionicons name="arrow-back" size={26} onPress={() => { navigation.goBack() }} />
+                <View className="w-full h-10 border-b border-gray-300 flex-row items-center pl-4">
+                    <Ionicons name="arrow-back" size={24} onPress={() => { navigation.goBack() }} />
                 </View>
                 <View className="w-full h-32 flex items-center mt-14">
                     <Image source={require("../../assets/ajilla.png")} />
@@ -36,7 +36,7 @@ export const Otp = () => {
                 <TouchableOpacity className="w-64 h-10 items-end">
                     <Text className="">Дахин код авах</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {navigation.navigate('newPassword' as never)}} className="w-10/12 h-11 ml-5 mr-5 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
+                <TouchableOpacity onPress={() => {navigation.navigate('newPassword' as never)}} className="w-10/12 h-11 ml-5 mr-5 rounded bg-[#00C2FF] shadow shadow-sky-700 flex items-center justify-center">
                     <Text className="text-white text-lg font-bold">Илгээх</Text>
                 </TouchableOpacity>
             </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         // borderWidth:2,
         // borderColor:"#1e1b4b",
         borderRadius: 50,
-        backgroundColor: "#1e1b4b",
+        backgroundColor: "#00C2FF",
         color: "white",
     },
 

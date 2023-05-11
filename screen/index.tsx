@@ -2,10 +2,6 @@ export * from './CategoriesItems'
 export * from './CategoryDetails'
 export * from './CommunityPage'
 export * from './TabScreen'
-export * from './explore'
-export * from './profileLogout'
-
-
-
-
-
+export * from './Explore'
+export * from './ProfileLogin'
+export * from './ProfileLogout'

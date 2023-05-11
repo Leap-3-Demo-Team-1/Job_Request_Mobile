@@ -7,7 +7,7 @@ const navigation = useNavigation();
         <View className="w-full h-36 flex flex-column pl-4  pr-4 justify-around border-b-2 border-gray-300">
             <View className="flex flex-row justify-between">
                 <Text className="text-xl">Explore</Text>
-                <Ionicons name="person-outline" size={26} onPress={() => {navigation.navigate("Profile" as never)}}/>
+                <Ionicons name="person-outline" size={24} onPress={() => {navigation.navigate("Profile" as never)}}/>
             </View>
             <View className="h-10 flex bg-gray-300 relative  rounded-md flex-row items-center justify-evenly">
                 <Ionicons name="search-outline" size={20}/>

@@ -6,8 +6,8 @@ export const ResetPassword = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView>
-            <View className="w-full h-12 border-b border-gray-300 flex-row items-center pl-4">
-                <Ionicons name="arrow-back" size={26} onPress={() => { navigation.goBack() }} />
+            <View className="w-full h-10 border-b border-gray-300 flex-row items-center pl-4">
+                <Ionicons name="arrow-back" size={24} onPress={() => { navigation.goBack() }} />
             </View>
             <View className="w-full h-32 flex items-center mt-14">
                 <Image source={require("../../assets/ajilla.png")} />
@@ -15,10 +15,10 @@ export const ResetPassword = () => {
             <View className="w-full h-36 ml-4 justify-between">
                 <Text className="text-base">Имэйл</Text>
                 <TextInput
-                    className="w-11/12 h-11 rounded border border-indigo-950 pl-3"
+                    className="w-11/12 h-11 rounded border border-gray-300 pl-3"
                     placeholder="Имэйл хаяг эсвэл утасны дугаараа оруулна уу?"
                 />
-                <TouchableOpacity onPress={() => {navigation.navigate('Otp' as never)}} className="w-11/12 h-11 rounded bg-indigo-950 shadow shadow-sky-700 flex items-center justify-center">
+                <TouchableOpacity onPress={() => {navigation.navigate('Otp' as never)}} className="w-11/12 h-11 rounded bg-[#00C2FF] shadow shadow-sky-700 flex items-center justify-center">
                     <Text className="text-white text-lg font-bold">Илгээх</Text>
                 </TouchableOpacity>
             </View>

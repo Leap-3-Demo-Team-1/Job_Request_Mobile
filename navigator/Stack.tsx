@@ -12,7 +12,7 @@ import {
   Otp,
   NewPassword,
 } from '../screen/auth';
-import {CategoriesScreen, CategoryDetails, ProfileLogout} from '../screen';
+import {CategoriesScreen, CategoryDetails, ProfileLogin, ProfileLogout} from '../screen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 const MyStack = () => {
@@ -100,6 +100,13 @@ const MyStack = () => {
       <Stack.Screen
         name={'newPassword'}
         component={NewPassword}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={'ProfileLogin'}
+        component={ProfileLogin}
         options={{
           headerShown: false,
         }}

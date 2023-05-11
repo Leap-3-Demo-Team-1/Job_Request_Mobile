@@ -21,7 +21,8 @@ export type RootStackParamList = {
   SignUpUser: undefined;
   ResetPassword: undefined;
   Otp: undefined;
-  newPassword: undefined
+  newPassword: undefined;
+  ProfileLogin:undefined;
 };
 
 function App(): JSX.Element {
