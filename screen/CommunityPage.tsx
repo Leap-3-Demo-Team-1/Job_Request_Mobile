@@ -1,25 +1,53 @@
-import {SafeAreaView, Text, TextInput, View} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
+import { FlatList, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+const CommunityPage = () => {
+  const navigation = useNavigation();
+  const [value, setValue] = useState(0);
 
-export const CommunityPage = () => {
+  const tabs = [
+    {name:'news'},
+    {name:'category'}
+  ]
   return (
     <SafeAreaView>
-      <View className=" m-auto w-11/12 h-full">
-        <View className="flex-row justify-between items-center">
-          <Text className=" font-bold">Community</Text>
-          <Ionicons name="person-outline" size={24} />
-        </View>
-        <View className="flex-1 bg-slate-200">
-          <View className='w-full rounded-xl bg-gray-300 flex-row items-center p-3 mt-8' style={{gap:5}}>
-            <Ionicons name="search" size={24}/>
-            <TextInput placeholder='Search' className='w-full h-full'></TextInput>
-          </View>
-          <View className='flex-row'>
-            <View className=' h-10 w-10'>
-
-            </View>
+      <View className='w-full h-full'>
+        <View className="w-full h-14 flex justify-between items-center flex-row border-b border-gray-300">
+          <Text className="text-xl pl-4">Community</Text>
+          <View className="h-full w-14 flex-row items-center justify-around">
+            <Ionicons name="person-outline" size={26} />
           </View>
         </View>
+        <FlatList
+            contentContainerStyle={{
+              display: 'flex',
+              flexDirection: 'row',
+            }}
+            data={tabs}
+            renderItem={({item, index}) => {
+              const isActive = value === index;
+              return (
+                <TouchableOpacity
+                  style={[
+                    {borderBottomWidth: 2, borderColor: '#d1d5db', padding:10},
+                    isActive && {borderColor: '#000'},
+                  ]}
+                  key={index}
+                  onPress={() => setValue(index)}
+                  // className="flex flex-1 justify-center items-center"
+                >
+                  <View style={[{}]}>
+                    <Text style={isActive && {color: '#000'}}>
+                      {item.name}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }}
+          />
+        
       </View>
     </SafeAreaView>
   );
