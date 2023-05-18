@@ -58,7 +58,7 @@ export const CommunityPage = () => {
           containerStyle={{ flex: 14, width: '100%' }}>
 
           <TabView.Item className="flex flex-14 w-full">
-            <Simple/>
+            <Simple />
           </TabView.Item>
 
           <TabView.Item className="flex flex-14 w-full items-center ">
